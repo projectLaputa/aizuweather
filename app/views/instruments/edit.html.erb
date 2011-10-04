@@ -1,0 +1,6 @@
+<h1>Editing instrument</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @instrument %> |
+<%= link_to @instrument.user.name+"'s instruments", user_path(@instrument.user_id) %>

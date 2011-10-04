@@ -1,0 +1,20 @@
+<h1>Listing Users</h1>
+
+<table border=1px>
+	<tr>
+		<th>UserID</th>
+		<th>UserName</th>
+  </tr>
+
+<% @users.each do |user| %>
+	<tr>
+		<td><%= user.id %></td>
+		<td><%= user.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Instruments', instruments_path %>
+

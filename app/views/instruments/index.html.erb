@@ -1,0 +1,45 @@
+<h1>Listing instruments</h1>
+
+<table border=1px>
+	<tr>
+		<th>UserID</th>
+		<th>UserName</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Type of instrument</th>
+    <th>Temperature</th>
+    <th>Pressure</th>
+    <th>Humidity</th>
+    <th></th>
+    <!--<th></th>
+		<th></th>-->
+  </tr>
+	<script>
+		var lat = new Array(<%= @instruments.size %>);
+		var lng = new Array(<%= @instruments.size %>);
+		var i = 0;
+	</script>
+	<% @instruments.each do |instrument| %>
+	<script>
+		lat[i] = <%= instrument.latitude %>;
+		lng[i++] = <%= instrument.longitude %>;
+	</script>
+	<tr>
+		<td><%= instrument.user_id %></td>
+		<td><%= instrument.user.name %></td>
+    <td><%= instrument.latitude %></td>
+    <td><%= instrument.longitude %></td>
+    <td><%= instrument.type_of_instrument %></td>
+    <td><%= instrument.temperature %></td>
+    <td><%= instrument.pressure %></td>
+    <td><%= instrument.humidity %></td>
+    <td><%= link_to 'Show', instrument %></td>
+    <!--<td><%= link_to 'Edit', edit_instrument_path(instrument) %></td>
+		<td><%= link_to 'Destroy', instrument, :confirm => 'Are you sure?', :method => :delete %></td>-->
+  </tr>
+	<% end %>
+</table>
+<p>
+<%= render 'map_all' %>
+</p>
+

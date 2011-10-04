@@ -1,0 +1,44 @@
+<div id="map_canvas" style="width:600px; height:400px"></div>
+<script>
+	var latlng = new google.maps.LatLng(<%= @instrument.latitude %>, <%= @instrument.longitude %>);
+  var opts = {
+    zoom: 14,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+
+	var characteristics = '<b>Data Characteristics</b><br />';
+	<% @flg = 0 %>
+	<% if @instrument.temperature == true %>
+		characteristics = characteristics + 'Temperature<br />';
+		<% @flg = 1 %>
+	<% end %>
+	<% if @instrument.pressure == true %>
+		characteristics = characteristics + 'Pressure<br />';
+		<% @flg = 1 %>
+	<% end %>
+	<% if @instrument.humidity == true %>
+		characteristics = characteristics + 'Humidity<br />';
+		<% @flg = 1 %>
+	<% end %>
+	<% if @flg == 0 %>
+		characteristics = characteristics + '<i>No Characteristics</i><br />';
+	<% end %>	
+	var contentStr = '<p><%= @instrument.type_of_instrument %></p>' + '<p>' + characteristics + '</p>';
+
+	var infowindow = new google.maps.InfoWindow({
+		content: contentStr,
+		maxWidth: 500,
+		position: latlng,
+	});
+
+	var marker = new google.maps.Marker({
+		position: latlng,
+		map: map,
+	});
+
+	google.maps.event.addListener(marker,'click',function(){
+		infowindow.open(map,marker);
+	});
+</script>

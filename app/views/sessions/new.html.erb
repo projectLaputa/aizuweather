@@ -1,0 +1,22 @@
+<% if session[:user].nil? %>
+<p id="notice"><%= notice %></p>
+<h1>Sign In</h1> 
+<p id="notice"><%= flash[:error] %></p>
+<%= form_for(:session, :url => sessions_path) do |f| %> 
+<div class="field"> 
+	<%= f.label :name, "UserName" %><br /> 
+	<%=h f.text_field :name %> 
+</div> 
+<div class="field"> 
+	<%= f.label :password %><br /> 
+	<%=h f.password_field :password %> 
+</div> 
+<div class="actions"> 
+	<%= f.submit "SignIn" %> 
+</div> 
+<% end %> 
+<p><%= link_to "New User", new_user_path %></p>
+
+<% else %>
+	Please sign out!! <%= link_to 'SignOut', new_session_path, :method => :delete %> 
+<% end %>

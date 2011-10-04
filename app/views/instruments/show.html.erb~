@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<p>
+	<b>UserID:</b>
+	<%= @instrument.user_id %>
+</p>
+
+<p>
+	<b>UserName:</b>
+	<%= @instrument.user.name %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @instrument.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @instrument.longitude %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @instrument.type_of_instrument %>
+</p>
+
+<p>
+  <b>Temperature:</b>
+  <%= @instrument.temperature %>
+</p>
+
+<p>
+  <b>Pressure:</b>
+  <%= @instrument.pressure %>
+</p>
+
+<p>
+  <b>Humidity:</b>
+  <%= @instrument.humidity %>
+</p>	
+
+<%= render 'map' %>
+
+<%= link_to 'Edit', edit_instrument_path(@instrument) %> |
+<%= link_to @instrument.user.name+"'s instruments", user_path(@instrument.user_id) %>

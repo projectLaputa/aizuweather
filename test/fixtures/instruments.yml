@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  latitude: 9.99
+  longitude: 9.99
+  type_of_instrument: MyString
+  temperature: false
+  pressure: false
+  humidity: false
+
+two:
+  latitude: 9.99
+  longitude: 9.99
+  type_of_instrument: MyString
+  temperature: false
+  pressure: false
+  humidity: false
