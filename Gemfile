@@ -5,7 +5,6 @@ gem 'sqlite3-ruby'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-gem 'rake', '0.8.7'
 gem 'sqlite3'
 
 gem 'json'
