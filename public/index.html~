@@ -1,20 +1,28 @@
 <p>
+<h1>AizuWeather</h1>
+AizuWeather is consists of three parts - sessions, users, instruments.<br />
 <h2>Sessions</h2>
-<a href="/sessions/new" about="_blank">Sign In</a>(/sessions/new)
+<a href="/sessions/new" target="_blank">Sign In</a>(/sessions/new)
 </p>
 <p>
 <h2>Users</h2>
-<a href="/users">Listing Users</a>(/users)<br />
-<a href="/users/new">New User</a>(/users/new)<br />
-Show(users/:id)<br />
+Listing Users(/users)<font color="red"><i>only admin</i></font><br />
+<a href="/users/new" target="_blank">New User</a>(/users/new)<br />
+<b>MyPage</b>(users/:id)<font color="red">*</font><br />
 </p>
 <p>
 <h2>Instruments</h2>
-<a href="/instruments">Listing Instruments</a>(/instruments)<br />
-<a href="/instruments/new">New Instrument</a>(/instruments/new)<br />
+<a href="/instruments" target="_blank">Listing Instruments</a>(/instruments)<i><font color="red">can't destroy and edit</font></i><br />
+New Instrument(/instruments/new)<font color="red">*</font><br />
 Show(instruments/:id)<br />
-Edit(instruments/:id/edit)<br />
+Edit(instruments/:id/edit)<font color="red">*</font><br />
 </p>
+<p>
+<font color="red">*</font>: These pages can access only when you login.<br />
+If you try to access these pages without login, redirect to SignIn page(/sessions/new).
+</p>
+<p><b>MyPage</b> is listing each user's all instruments. But, if you are admin user, it's listing all instruments. </p>
+<p><a href="/instruments" target="_blank">Listing Instruments</a>(/instruments): We can all instruments position on the one map.</p>
 <!--<!DOCTYPE html>
 <html>
   <head>
