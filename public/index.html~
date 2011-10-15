@@ -17,11 +17,12 @@ New Instrument(/instruments/new)<font color="red">*</font><br />
 Show(instruments/:id)<br />
 Edit(instruments/:id/edit)<font color="red">*</font><br />
 </p>
+<hr>
 <p>
 <font color="red">*</font>: These pages can access only when you login.<br />
 If you try to access these pages without login, redirect to SignIn page(/sessions/new).
 </p>
-<p><b>MyPage</b> is listing each user's all instruments. But, if you are admin user, it's listing all instruments. </p>
+<p><b>MyPage</b> is listing each user's all instruments and can destroy or edit these. If you are admin user, it's listing all instruments. </p>
 <p><a href="/instruments" target="_blank">Listing Instruments</a>(/instruments): We can all instruments position on the one map.</p>
 <!--<!DOCTYPE html>
 <html>
