@@ -1,1 +1,46 @@
-body{background-color:#fff;color:#333;font-family:verdana, arial, helvetica, sans-serif;font-size:13px;line-height:18px}p,ol,ul,td{font-family:verdana, arial, helvetica, sans-serif;font-size:13px;line-height:18px}pre{background-color:#eee;padding:10px;font-size:11px}a{color:#000}a:visited{color:#666}a:hover{color:#fff;background-color:#000}div.field,div.actions{margin-bottom:10px}#notice{color:green}.field_with_errors{padding:2px;background-color:red;display:table}#error_explanation{width:450px;border:2px solid red;padding:7px;padding-bottom:0;margin-bottom:20px;background-color:#f0f0f0}#error_explanation h2{text-align:left;font-weight:bold;padding:5px 5px 5px 15px;font-size:12px;margin:-7px;margin-bottom:0px;background-color:#c00;color:#fff}#error_explanation ul li{font-size:12px;list-style:square}
+@charset "UTF-8";
+
+html,body {
+	background: #eee;
+	height: 100%;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+a:link { color: #f5f5f5; text-decoration: none; }
+a:visited { color: #f0f0f0; }
+a:hover { text-decoration: underline; }
+*/
+#wrapper{
+	background: #fff;
+	min-height: 100%;
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+#yield{
+	background: #fff;
+	min-height: 100%;
+	margin: 0 auto;
+	padding-left: 50px;
+	text-align: left;
+}
+
+#topbar{
+	background: #4671d5;
+	color: #ffffff;
+	padding-left: 50px;
+	text-align: left;
+}
+
+#header {
+	text-align: left;
+	padding-left: 50px;
+}
+
+#signin{
+	text-align: center;
+}
+
