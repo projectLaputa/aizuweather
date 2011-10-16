@@ -5,12 +5,14 @@
 	<title>
 		<%=  @title ? 'AizuWeather - '+@title : 'AizuWeather' %>
 	</title>
-	<%= stylesheet_link_tag    "application" %>
+	<%= stylesheet_link_tag    "../../assets/stylesheets/application.css" %>
+	<!--<link href="../../../assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />-->
   <%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>	
 </head>
 <body>
+	<div id="wrapper">
 	<div id="topbar">
 		AizuWeather
 	</div>
@@ -27,6 +29,7 @@
 	</div>
 	<div id="yield">
 		<%= yield %>
+	</div>
 	</div>
 </body>
 </html>
