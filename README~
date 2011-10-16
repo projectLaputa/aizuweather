@@ -10,18 +10,18 @@ Now, I'm developing this web system. Instruments have been developed, too. So, t
 AizuWeather is consists of three parts - sessions, users, instruments.
 
 -Sessions
-	Sign In(/sessions/new)
+  Sign In(/sessions/new)
 
 -Users
-	Listing Users(/users) [only admin]
-	New User(/users/new)
+  Listing Users(/users) [only admin]
+  New User(/users/new)
 * MyPage(users/:id)
 
 -Instruments
-	Listing Instruments(/instruments)	[can't destroy and edit]
-*	New Instrument(/instruments/new)
-	Show(instruments/:id)
-*	Edit(instruments/:id/edit)
+  Listing Instruments(/instruments) [can't destroy and edit]
+* New Instrument(/instruments/new)
+  Show(instruments/:id)
+* Edit(instruments/:id/edit)
 
 *: These pages can access only when you login.
 If you try to access these pages without login, redirect to SignIn page(/sessions/new).

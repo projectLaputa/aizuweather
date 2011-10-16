@@ -14,8 +14,16 @@
     <!--<th></th>
 		<th></th>-->
   </tr>
-
-<% @instruments.each do |instrument| %>
+	<script>
+		var lat = new Array(<%= @instruments.size %>);
+		var lng = new Array(<%= @instruments.size %>);
+		var i = 0;
+	</script>
+	<% @instruments.each do |instrument| %>
+	<script>
+		lat[i] = <%= instrument.latitude %>;
+		lng[i++] = <%= instrument.longitude %>;
+	</script>
 	<tr>
 		<td><%= instrument.user_id %></td>
 		<td><%= instrument.user.name %></td>
@@ -29,7 +37,7 @@
     <!--<td><%= link_to 'Edit', edit_instrument_path(instrument) %></td>
 		<td><%= link_to 'Destroy', instrument, :confirm => 'Are you sure?', :method => :delete %></td>-->
   </tr>
-<% end %>
+	<% end %>
 </table>
 <p>
 <%= render 'map_all' %>

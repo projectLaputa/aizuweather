@@ -3,6 +3,7 @@
 html,body {
 	background: #eee;
 	height: 100%;
+	color: #fff;
 	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 	margin: 0;
 	padding: 0;
