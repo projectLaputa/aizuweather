@@ -1,8 +1,12 @@
-<% if session[:user].nil? %>
-<p id="notice"><%= notice %></p>
-<h1>Sign In</h1> 
-<p id="notice"><%= flash[:error] %></p>
+<div id="map">
+	<%= render 'map' %>
+</div>
+
 <div id="signin">
+<% if session[:user].nil? %>
+<div id="notice"><%= notice %></div>
+<h1 >Sign In</h1> 
+<div id="notice"><%= flash[:error] %></div>
 <%= form_for(:session, :url => sessions_path) do |f| %> 
 <div class="field"> 
 	<%= f.label :name, "UserName" %>
@@ -19,5 +23,5 @@
 </div>
 
 <% else %>
-	Please sign out!! <%= link_to 'SignOut', new_session_path, :method => :delete %> 
+	Please sign out!! 
 <% end %>

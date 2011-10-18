@@ -40,6 +40,3 @@
 </p>	
 
 <%= render 'map' %>
-
-<%= link_to 'Edit', edit_instrument_path(@instrument) %> |
-<%= link_to @instrument.user.name+"'s instruments", user_path(@instrument.user_id) %>

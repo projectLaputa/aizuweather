@@ -1,0 +1,10 @@
+<div id="map_canvas" style="width:500px; height:300px"></div>
+<script>
+	var centerlatlng = new google.maps.LatLng('37.477038', '140.086670');
+  var opts = {
+    zoom: 9,
+    center: centerlatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+</script>

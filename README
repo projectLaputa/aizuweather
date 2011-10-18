@@ -10,7 +10,7 @@ Now, I'm developing this web system. Instruments have been developed, too. So, t
 AizuWeather is consists of three parts - sessions, users, instruments.
 
 -Sessions
-  Sign In(/sessions/new) = index.html
+  Sign In(/sessions/new) = root
 
 -Users
   Listing Users(/users) [only admin]
