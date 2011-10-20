@@ -29,10 +29,11 @@ class UsersController < ApplicationController
 		else
 			if @user.admin == true 
 				@instruments = Instrument.all
+				@title = "All instruments(Admin)"
 			else
 				@instruments = @user.instruments
-			end
 				@title = @user.name + "'s instruments"
+			end
 		end
 	end
 	def destroy

@@ -14,20 +14,20 @@
 	<div id="wrapper">
 		<div id="header">
 		<%= link_to "AizuWeather", root_path %>   
-		<%= link_to "Instruments", instruments_path %> | 
+		<%= link_to "Instruments", instruments_path %>   
 	<% if session[:user].nil? %>
-		<%= link_to "NewUser", new_user_path %> | 
+		<%= link_to "NewUser", new_user_path %>   
 		<%= link_to "SignIn", root_path %>
 	<% else %>	
-		<%= link_to 'MyPage', user_path(session[:user]) %> | 
-		<%= link_to "NewInstrument", new_instrument_path %> | 
+		<%= link_to 'MyPage', user_path(session[:user]) %>   
+		<%= link_to "NewInstrument", new_instrument_path %>   
 		Logging UserID:<%= session[:user] %> <%= link_to 'SignOut', new_session_path, :method => :delete %>
 	<% end %>
 	</div>
 	<div id="yield">
 		<%= yield %>
 	</div>
-	<br>
+	<!--
 	<div id="footer">
 		<hr>
 			<div id="about">
@@ -51,7 +51,8 @@
 					<dd>Edit(instruments/:id/edit)</dd>
 				</dl>
 			</div>
-	</div>
+		</div>
+		-->
 </div>
 </body>
 </html>

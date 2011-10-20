@@ -46,7 +46,8 @@ class UsersController < ApplicationController
 	private
 	def check_logined
 		if session[:user].nil?
-			redirect_to :controller => 'sessions', :action => 'new'
+			#redirect_to :controller => 'sessions', :action => 'new'
+			redirect_to root_path
 		else
 			@login_user = User.find(session[:user])
 			if @login_user.nil?

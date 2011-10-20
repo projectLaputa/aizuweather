@@ -1,7 +1,7 @@
-<div id="map">
+<div id="map_index">
 	<%= render 'map' %>
 </div>
-
+<div id="variable">
 <div id="signin">
 <% if session[:user].nil? %>
 <div id="notice"><%= notice %></div>
@@ -22,7 +22,7 @@
 <% end %>
 
 <% else %>
-	Please sign out!! 
+	Logging. 
 <% end %>
 </div>
-
+</div>
