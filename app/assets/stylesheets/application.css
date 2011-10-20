@@ -9,13 +9,27 @@ html,body {
 	padding: 0;
 }
 
+/* table */
+table{
+	border-style: none;
+}
+th{
+	border-style: none;
+	text-align: center;
+	padding: 0px 10px 0px;
+}
+th:empty {
+	background-color: rgba(0,0,0,0);
+}
+td{
+	border-style: none;
+}
+
 i{color: #f00;}
 
-
-#header a:link { color: #0ff; text-decoration: none; }
-#header a:visited { color: #0ff; }
-#header a:hover { text-decoration: underline; }
-
+a:link { color: #36f; text-decoration: none; }
+a:visited { color: #36f; }
+a:hover { text-decoration: underline; }
 
 #wrapper{
 	background: #888;
@@ -37,9 +51,13 @@ i{color: #f00;}
   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
 }
 
+#header a:link { color: #0ff; text-decoration: none; }
+#header a:visited { color: #0ff; }
+#header a:hover { text-decoration: underline; }
+
 #title{
 	float: left;
-	padding: 5px 1em;
+	padding: 0.4em 1em;
 }
 
 #menu{
@@ -58,7 +76,7 @@ i{color: #f00;}
 #menu li a{
 	text-decoration: none;
 	display: block;
-	padding: 0.3em 1em;
+	padding: 0.4em 1em;
 }
 
 #menu li a:link { color: #eee; text-decoration: none; }
@@ -67,7 +85,7 @@ i{color: #f00;}
 
 #login{
 	float: right;
-	padding: 5px;
+	padding: 0.4em;
 }
 
 #yield{
