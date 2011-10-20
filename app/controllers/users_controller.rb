@@ -36,12 +36,13 @@ class UsersController < ApplicationController
 			end
 		end
 	end
-	def destroy
-		@user = User.find(params[:id])
-		if @user.id == session[:user]
-			@user.destroy
-		end
-	end
+	
+	#def destroy
+	#	@user = User.find(params[:id])
+	#	if @user.id == session[:user]
+	#		@user.destroy
+	#	end
+	#end
 
 	private
 	def check_logined

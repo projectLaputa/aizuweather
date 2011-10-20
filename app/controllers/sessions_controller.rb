@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
 			render 'new'
 		else
 			session[:user] = user.id
+			session[:name] = user.name
 			redirect_to user
 		end
   end

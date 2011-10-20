@@ -1,13 +1,12 @@
 class SessionsController < ApplicationController
   def new
-  	@title = "Sign In"
+  	#hogehoge
 	end
 
   def create
 		user = User.authenticate(params[:session][:name],params[:session][:password])
 		if user.nil?
 			flash.now[:error] = "Couldn't Sign In."
-			@title = "Sign In"
 			render 'new'
 		else
 			session[:user] = user.id

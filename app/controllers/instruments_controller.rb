@@ -26,7 +26,7 @@ class InstrumentsController < ApplicationController
   # GET /instruments/1/edit
   def edit
     @instrument = Instrument.find(params[:id])
-		if @instrument.user.id != session[:user]
+		if (@instrument.user.id != session[:user]) && (@login_user.admin == false)
 			redirect_to user_path(session[:user])
 		end
   end
@@ -51,7 +51,7 @@ class InstrumentsController < ApplicationController
   # PUT /instruments/1.json
   def update
     @instrument = Instrument.find(params[:id])
-		if @instrument.user.id != session[:user]
+		if (@instrument.user.id != session[:user]) && (@login_user.admin == false)
 			redirect_to user_path(session[:user])
 		end
     respond_to do |format|
@@ -69,13 +69,13 @@ class InstrumentsController < ApplicationController
   # DELETE /instruments/1.json
   def destroy
     @instrument = Instrument.find(params[:id])
-		if @instrument.user.id != session[:user]
+		if (@instrument.user.id != session[:user]) && (@login_user.admin == false)
 			redirect_to user_path(session[:user])
 		end
     @instrument.destroy
 
     respond_to do |format|
-      format.html { redirect_to instruments_url }
+      format.html { redirect_to user_path(session[:user]) }
       format.json { head :ok }
     end
   end

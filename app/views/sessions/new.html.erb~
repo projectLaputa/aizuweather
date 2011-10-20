@@ -1,4 +1,5 @@
-<div id="map">
+<h1 align="center">AizuWeather</h1>
+<div id="map_index">
 	<%= render 'map' %>
 </div>
 <div id="variable">
@@ -9,11 +10,11 @@
 <div id="notice"><%= flash[:error] %></div>
 <%= form_for(:session, :url => sessions_path) do |f| %> 
 <div class="field"> 
-	<%= f.label :name, "UserName" %>
+	<%= f.label :name, "UserName" %><br />
 	<%=h f.text_field :name %> 
 </div> 
 <div class="field"> 
-	<%= f.label :password %> 
+	<%= f.label :password %><br />
 	<%=h f.password_field :password %> 
 </div> 
 <div class="actions"> 
