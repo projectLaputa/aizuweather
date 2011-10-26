@@ -6,8 +6,9 @@
 		<%=  @title ? 'AizuWeather - '+@title : 'AizuWeather' %>
 	</title>
 	<%= stylesheet_link_tag    "application.css" %>
-  <%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
+
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>	
 </head>
 <body>
@@ -27,39 +28,13 @@
 			<% if session[:user].nil? %>
 				<%= link_to "SignIn", root_path %>
 			<% else %>	
-				User: <%= session[:name] %> [<%= link_to 'SignOut', new_session_path, :method => :delete %>]
+				<%= session[:name] %> [<%= link_to 'SignOut', new_session_path, :method => :delete %>]
 			<% end %>
 		</div>
 	</div>
 	<div id="yield">
 		<%= yield %>
 	</div>
-	<!--
-	<div id="footer">
-		<hr>
-			<div id="about">
-				<h3>About AizuWeather</h3>
-				<p>AizuWeather is system that get weather data (Temperature, Pressure, Humidity) from many instruments there are in Fukushima, Aizu-Wakamatsu. And can see these on web.</p>
-				<p>Now, we're developing this web system and instruments. So, this system update frequently.</p>
-				<a href="https://github.com/takuti/aizuweather">github repository</a>
-			</div>
-			<div id="sitemap">
-				<h3>SiteMap</h3>
-				<dl>
-					<dt><%= link_to "Top", root_path %></dt>
-					<dt>Users</dt>
-					<dd><%= link_to "Listing Users", users_path %> (/users) <i>only admin</i></dd>
-					<dd>New User (/users/new)</dd>
-					<dd>My Page (/users/:id)</dd>
-					<dt>Instruments</dt>
-					<dd><%= link_to "Listing Instruments", instruments_path %> (/instruments) <i>can't destroy and edit</i></dd>
-					<dd>New Instrument (/instruments/new)</dd>
-					<dd>Show (instruments/:id)</dd>
-					<dd>Edit(instruments/:id/edit)</dd>
-				</dl>
-			</div>
-		</div>
-		-->
 </div>
 </body>
 </html>

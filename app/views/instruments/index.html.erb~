@@ -1,7 +1,6 @@
 <h1>Listing instruments</h1>
 
 <table border=1px>
-	<thead>
 	<tr>
 		<th>UserID</th>
 		<th>UserName</th>
@@ -13,13 +12,11 @@
 		<th>Humidity</th>
 		<th></th>
 	</tr>
-	</thead>
 	<script>
 		var lat = new Array(<%= @instruments.size %>);
 		var lng = new Array(<%= @instruments.size %>);
 		var i = 0;
 	</script>
-	<tbody>
 	<% @instruments.each do |instrument| %>
 	<script>
 		lat[i] = <%= instrument.latitude %>;
@@ -39,7 +36,6 @@
 		<td><%= link_to 'Destroy', instrument, :confirm => 'Are you sure?', :method => :delete %></td>-->
   </tr>
 	<% end %>
-	</tbody>
 </table>
 <div id="map">
 <%= render 'map_all' %>

@@ -3,8 +3,7 @@
 <table border=1px>
 	<tr>
 		<% if @user.admin == true %>
-			<th>UserID</th>
-			<th>Name</th>
+			<th>User</th>
 		<% end %>	
 		<th>Latitude</th>
     <th>Longitude</th>
@@ -20,7 +19,6 @@
 <% @instruments.each do |instrument| %>
 	<tr>
 		<% if @user.admin == true %>
-			<td><%= instrument.user.id %></td>
 			<td><%= instrument.user.name %></td>
 		<% end %>	
 		<td><%= instrument.latitude %></td>
@@ -36,5 +34,5 @@
 <% end %>
 </table>
 <% if @user.admin == true %>
-	<%= link_to 'Users', users_path %>
+	<p><%= link_to 'Users', users_path %></p>
 <% end %>

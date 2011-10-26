@@ -3,12 +3,11 @@
 <table border=1px>
 	<tr>
 		<% if @user.admin == true %>
-			<th>UserID</th>
-			<th>Name</th>
+			<th>User</th>
 		<% end %>	
 		<th>Latitude</th>
     <th>Longitude</th>
-    <th>Type of instrument</th>
+    <th>Type</th>
     <th>Temperature</th>
     <th>Pressure</th>
     <th>Humidity</th>
@@ -20,7 +19,6 @@
 <% @instruments.each do |instrument| %>
 	<tr>
 		<% if @user.admin == true %>
-			<td><%= instrument.user.id %></td>
 			<td><%= instrument.user.name %></td>
 		<% end %>	
 		<td><%= instrument.latitude %></td>

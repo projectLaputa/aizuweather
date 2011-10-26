@@ -2,11 +2,11 @@
 @charset "UTF-8";
 
 html,body {
-	/*background: #eee;*/
 	height: 100%;
 	font-family: 'Comic Sans MS',sans-serif;
 	margin: 0;
 	padding: 0;
+	background: #888;
 }
 
 /* table */
@@ -14,15 +14,16 @@ table{
 	border-style: none;
 }
 th{
-	border-style: none;
+	border-style: none none solid none;
 	text-align: center;
-	padding: 0px 10px 0px;
 }
 th:empty {
+	border-style: none;
 	background-color: rgba(0,0,0,0);
 }
 td{
 	border-style: none;
+	padding: 0 0.5em;
 }
 
 i{color: #f00;}
@@ -39,10 +40,14 @@ a:hover { text-decoration: underline; }
 	margin: 0 auto;
 }
 
+body > #wrapper {
+ height: auto;
+}
+
 #header {
 	text-align: left;
 	padding: 0 50px 0 50px;
-	background: #505050;
+	background-color: #505050;
 	max-width: 100%;
 	height: 35px;
 	color: #fff;
@@ -55,7 +60,7 @@ a:hover { text-decoration: underline; }
 #header a:visited { color: #0ff; }
 #header a:hover { text-decoration: underline; }
 
-#title{
+#logo{
 	float: left;
 	padding: 0.4em 1em;
 }
@@ -89,13 +94,13 @@ a:hover { text-decoration: underline; }
 }
 
 #yield{
-	/*only now*/padding: 20px;
+	padding: 20px 40px;
 	max-width: 100%;
 	max-height: 100%;
 	margin: 20px 50px 20px 50px;
 	text-align: left;
 	height: 80%;
-	background: #ddd;
+	background-color: #ddd;
 	clear: both;
 
 	/*font real*/
@@ -107,15 +112,19 @@ a:hover { text-decoration: underline; }
 	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
   -moz-border-radius: 10px;	/* Firefox */
 	
-	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.8);
 }
 
 #map_index{
 	float: left; 
 	padding: 20px;
 	width: 500px;
+	background-color: #bbb;
+
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
+  -moz-border-radius: 10px;	/* Firefox */
 }
 
 #variable{
@@ -124,10 +133,23 @@ a:hover { text-decoration: underline; }
 
 #signin{
 	float: right;
-	padding: 20px;
+	padding:0 20px;
 	width: 100%;
 }
 
-#map{
+
+
+#about{
+	clear: both;
 	padding: 20px;
+}
+
+#map{
+	margin-top: 20px;
+	padding: 20px;
+	width: 600px;
+	background-color: #bbb;
+
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
+  -moz-border-radius: 10px;	/* Firefox */
 }
