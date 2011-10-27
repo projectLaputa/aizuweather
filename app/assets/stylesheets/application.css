@@ -153,3 +153,7 @@ body > #wrapper {
 	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
   -moz-border-radius: 10px;	/* Firefox */
 }
+
+.characteristics{
+	text-align: center;
+}

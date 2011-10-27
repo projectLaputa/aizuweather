@@ -32,10 +32,6 @@ a:link { color: #36f; text-decoration: none; }
 a:visited { color: #36f; }
 a:hover { text-decoration: underline; }
 
-h1:after {
-	content:url("15.png");
-}
-
 #wrapper{
 	background: #888;
 	min-height: 100%;
@@ -139,11 +135,6 @@ body > #wrapper {
 	float: right;
 	padding:0 20px;
 	width: 100%;
-	/*
-	background-image: url("rain1.gif");
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	*/
 }
 
 
