@@ -25,18 +25,18 @@
     <td><%= instrument.longitude %></td>
     <td><%= instrument.type_of_instrument %></td>
 		<td class="characteristics">
-			<% if instrument.temperature == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.temperature == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
     <td class="characteristics">
-			<% if instrument.pressure == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.pressure == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
 		<td class="characteristics">
-			<% if instrument.humidity == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.humidity == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
 		<td><%= link_to 'Show', instrument %></td>

@@ -40,8 +40,8 @@
 			<% end %>
 		</td>
 		<td><%= link_to 'Show', instrument %></td>
-    <td><%= link_to 'Edit', edit_instrument_path(instrument) %><%= link_to(image_tag("icon/bungu-enpitu1-16mi.gif", :alt=>"edit"),  edit_instrument_path(instrument)) %></td>
-    <td><%= link_to 'Destroy', instrument, :confirm => 'Are you sure?', :method => :delete %><%= link_to(image_tag("icon/ico_ashcan1_13.gif", :alt=>"delete"), instrument, :confirm => 'Are you sure?', :method => :delete ) %></td>
+    <td><%= link_to(image_tag("icon/bungu-enpitu1-16mi.gif", :alt=>"edit"),  edit_instrument_path(instrument)) %></td>
+    <td><%= link_to(image_tag("icon/ico_ashcan1_13.gif", :alt=>"delete"), instrument, :confirm => 'Are you sure?', :method => :delete ) %></td>
   </tr>
 <% end %>
 </table>

@@ -41,7 +41,7 @@
 			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
-    <td><%= link_to 'Show', instrument %><%= link_to(image_tag("icon/clipboard-eye-16.png", :alt=>"show"), instrument) %></td>
+    <td><%= link_to 'Show', instrument %></td>
   </tr>
 	<% end %>
 </table>
