@@ -1,0 +1,19 @@
+<div id="signin">
+<div id="notice"><%= notice %></div>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+	<fieldset>
+<span class="clearfix"> 
+	<%= f.label :name, "UserName", :for=>"xlInput", :clas=>"label" %>
+	<%=h f.text_field :name, :size => 15, :class=>"input" %>
+</span> 
+<span class="clearfix"> 
+	<%= f.label :password,:for=>'xlInput', :class=>"label" %>
+	<%=h f.password_field :password, :size => 15 , :class=>"input" %> 
+</span> 
+<span class="actions"> 
+	<%= f.submit "SignIn" %> 
+</span> 
+<% end %>
+<div id="notice"><%= flash[:error] %></div>
+</div>
+<div id="signin">

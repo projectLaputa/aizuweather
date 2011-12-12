@@ -1,34 +1,14 @@
-<div id="map_index">
-	<%= render 'map' %>
+<div id="map">
+	MAP here!
 </div>
-<div id="variable">
-<div id="signin">
-<% if session[:user].nil? %>
-<div id="notice"><%= notice %></div>
-<h2>SignIn</h2> 
-<div id="notice"><%= flash[:error] %></div>
-<%= form_for(:session, :url => sessions_path) do |f| %> 
-<div class="field"> 
-	<%= f.label :name, "UserName" %>
-	<%=h f.text_field :name %> 
-</div> 
-<div class="field"> 
-	<%= f.label :password %> 
-	<%=h f.password_field :password %> 
-</div> 
-<div class="actions"> 
-	<%= f.submit "SignIn" %> 
-</div> 
-<% end %>
-
-<% else %>
-	<h2>Logging...</h2> 
-<% end %>
-</div>
-</div>
-<div id="about">
-	<h3>About AizuWeather</h3>
-	<p>AizuWeather is system that get weather data (Temperature, Pressure, Humidity) from many instruments there are in Fukushima, Aizu-Wakamatsu. And can see these on web.</p>
-	<p>Now, we're developing this web system and instruments. So, this system update frequently.</p>
+<section>
+<h1>About<span>What is the AizuWeather?</span></h1>
+	<div id="content">
+	<p>
+	AizuWeather is system that get weather data (Temperature, Pressure, Humidity) from many instruments there are in Fukushima, Aizu-Wakamatsu. And can see these on web.<br />
+	Now, we're developing this web system and instruments. So, this system update frequently.<br />
 	<a href="https://github.com/takuti/aizuweather" target="_blank">github repository</a>	
+	</p>
+	</div>
+</section>
 </div>

@@ -1,4 +1,3 @@
-<div id="map_canvas" style="width:600px; height:400px"></div>
 <script>
 	var latlng = new google.maps.LatLng(<%= @instrument.latitude %>, <%= @instrument.longitude %>);
   var opts = {
@@ -6,7 +5,7 @@
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
-	var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+	var map = new google.maps.Map(document.getElementById("map"), opts);
 
 	var characteristics = '<b>Data Characteristics</b><br />';
 	<% @flg = 0 %>

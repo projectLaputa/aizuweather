@@ -10,38 +10,41 @@
       </ul>
     </div>
   <% end %>
-	
-	<div class="field">
+	<fieldset>
+	<div >
 		<%= f.hidden_field :user_id, :value => session[:user] %>
 	</div>
-  <div class="field">
-		<b><%= f.label :latitude %></b><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-		<b><%= f.label :longitude %></b><br />
-    <%= f.text_field :longitude %>
+  <div >
+		<label><%= :Latitude %></label>
+		<div class="input"><%= f.text_field :latitude %></div>
 	</div>
-  <div class="field">
-		<b>Type</b><br />
-    <%= f.text_field :type_of_instrument %>
+  <div>
+		<label><%= :Longitude %></label>
+		<div class="input"><%= f.text_field :longitude %></div>
 	</div>
-	<div class="data_characteristics">
-		<b>Data Characteristics</b>
-  	<div class="field">
-  	  <%= f.label :temperature %><br />
-  	  <%= f.check_box :temperature %>
-  	</div>
+	<div>
+		<label>Type</label>
+		<div class="input"><%= f.text_field :type_of_instrument %></div>
 	</div>
-  <div class="field">
-    <%= f.label :pressure %><br />
-    <%= f.check_box :pressure %>
-  </div>
-  <div class="field">
-    <%= f.label :humidity %><br />
-    <%= f.check_box :humidity %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div>
+		<label>Data Characteristics</label>
+		<div class="input">
+				<label>
+				<%= f.check_box :temperature %>
+				<span><%= :Temperature %></span>
+				</label>
+				<label>
+				<%= f.check_box :pressure %>
+				<span><%= :Pressure %></span>
+				</label>
+				<label>
+				<%= f.check_box :humidity %>
+				<span><%= :Humidity %></span>
+				</label>
+		</div>
+ </div>
+	<div class="actions">
+		<%= f.submit%>
+	</div>
+	</fieldset>
 <% end %>

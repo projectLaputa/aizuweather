@@ -1,8 +1,9 @@
+<h1>Create new user<span>I want to be a user of AizuWeather.</span></h1>
+<div id="content">
 <% if session[:user].nil? %>
-<h1>New User</h1>
 <%= form_for(@user) do |f| %>
 	<% if @user.errors.any? %>
-    <div id="error_explanation">
+    <div >
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
@@ -11,24 +12,27 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-	<div class="field">
-		<b><%= f.label :name, "UserName" %></b><br />
-		<%=h f.text_field :name %>
+	<% end %>
+	<fieldset>
+	<div >
+		<%= f.label :name, "UserName" %>
+		<div class="input"><%=h f.text_field :name %></div>
 	</div>
-	<div class="field">
-		<b><%= f.label :password, "Password" %></b><br />
-		<%=h f.password_field :password %>
+	<div >
+		<%= f.label :password, "Password" %>
+		<div class="input"><%=h f.password_field :password %></div>
 	</div>
-	<div class="field">
-		<b><%= f.label :password_confirmation, "Password(confirm)" %></b><br />
-		<%=h f.password_field :password_confirmation %>
+	<div>
+		<%= f.label :password_confirmation, "Password(confirm)" %>
+		<div class="input"><%=h f.password_field :password_confirmation %></div>
 	</div>
 	<div class="actions">
 		<%=f.submit "create" %>
 	</div>
+	</fieldset>
 <% end %>
 
 <% else %>
-	Please sign out!! <%= link_to 'SignOut', new_session_path, :method => :delete %> 
+	<p>You are logging. Please sign out.</p> <%= link_to 'SignOut', new_session_path, :method => :delete %> 
 <% end %>
+</div>

@@ -1,6 +1,7 @@
-<h1>Listing instruments</h1>
-
-<table border=1px>
+<h1>Listing all instruments<span>How many instruments exist? Where are they?</span></h1>
+<div id="content">
+<table>
+	<thead>
 	<tr>
 		<th>User</th>
     <th>Latitude</th>
@@ -11,6 +12,8 @@
 		<th>Humidity</th>
 		<th></th>
 	</tr>
+	</thead>
+	<tbody>
 	<script>
 		var lat = new Array(<%= @instruments.size %>);
 		var lng = new Array(<%= @instruments.size %>);
@@ -43,9 +46,10 @@
 		</td>
     <td><%= link_to 'Show', instrument %></td>
   </tr>
-	<% end %>
+<% end %>
+	</tbody>
 </table>
-<div id="map">
-<%= render 'map_all' %>
 </div>
+<div id="map"></div>
+<%= render 'map_all' %>
 

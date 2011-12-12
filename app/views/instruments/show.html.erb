@@ -1,44 +1,40 @@
+<h1>Show Instrument ID: <%= @instrument.id %><span>How is this instrument...?</span></h1>
 <div id="notice"><%= notice %></div>
-<p>
-	<b>UserID:</b>
-	<%= @instrument.user_id %>
-</p>
-
-<p>
-	<b>UserName:</b>
-	<%= @instrument.user.name %>
-</p>
-
-<p>
-  <b>Latitude:</b>
-  <%= @instrument.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @instrument.longitude %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= @instrument.type_of_instrument %>
-</p>
-
-<p>
-  <b>Temperature:</b>
-  <%= @instrument.temperature %>
-</p>
-
-<p>
-  <b>Pressure:</b>
-  <%= @instrument.pressure %>
-</p>
-
-<p>
-  <b>Humidity:</b>
-  <%= @instrument.humidity %>
-</p>	
-<div id="map">
+<div id="content">
+	<div>
+		<b>UserID:</b>
+		<%= @instrument.user_id %>
+	</div>
+	<div>
+		<b>UserName:</b>
+		<%= @instrument.user.name %>
+	</div>
+	<div>
+	  <b>Latitude:</b>
+	  <%= @instrument.latitude %>
+	</div>
+	<div>
+  	<b>Longitude:</b>
+  	<%= @instrument.longitude %>
+	</div>
+	<div>
+	  <b>Type:</b>
+	  <%= @instrument.type_of_instrument %>
+	</div>
+	<div>
+	  <b>Temperature:</b>
+	  <%= @instrument.temperature %>
+	</div>	
+	<div>
+  	<b>Pressure:</b>
+  	<%= @instrument.pressure %>
+	</div>
+	<div>
+  	<b>Humidity:</b>
+  	<%= @instrument.humidity %>
+	</div>	
+</div>
+<div id="map" style="width:900px; height:300px"></div>
 	<%= render 'map' %>
 </div>
 

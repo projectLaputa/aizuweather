@@ -1,0 +1,8 @@
+@import url(common.css);
+
+#map{
+	width: 900px;
+	height: 300px;
+	background: #eee;
+	font-size: 2em;
+}

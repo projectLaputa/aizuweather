@@ -1,6 +1,7 @@
 <h1><%= @title %></h1>
-
-<table border=1px>
+<div id="content">
+<table id="list">
+	<thead>
 	<tr>
 		<% if @user.admin == true %>
 			<th>User</th>
@@ -15,7 +16,8 @@
     <th></th>
     <th></th>
   </tr>
-
+</thead>
+	<tbody>
 <% @instruments.each do |instrument| %>
 	<tr>
 		<% if @user.admin == true %>
@@ -25,18 +27,18 @@
     <td><%= instrument.longitude %></td>
     <td><%= instrument.type_of_instrument %></td>
 		<td class="characteristics">
-			<% if instrument.temperature == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.temperature == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
     <td class="characteristics">
-			<% if instrument.pressure == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.pressure == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
 		<td class="characteristics">
-			<% if instrument.humidity == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.humidity == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
 		<td><%= link_to 'Show', instrument %></td>
@@ -44,7 +46,9 @@
     <td><%= link_to(image_tag("icon/ico_ashcan1_13.gif", :alt=>"delete"), instrument, :confirm => 'Are you sure?', :method => :delete ) %></td>
   </tr>
 <% end %>
+	</tbody>
 </table>
+</div>
 <% if @user.admin == true %>
 	<p><%= link_to 'Users', users_path %></p>
 <% end %>

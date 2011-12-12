@@ -1,6 +1,6 @@
-<h1>Editing instrument</h1>
-
+<h1>Edit instrument ID: <%= @instrument.id %><span>This instrument's information has changed.</span></h1>
+<div id="content">
 <%= render 'form' %>
-
+</div>
 <%= link_to 'Show', @instrument %> |
-<%= link_to @instrument.user.name+"'s instruments", user_path(@instrument.user_id) %>
+<%= link_to "MyPage", user_path(session[:user]) %>

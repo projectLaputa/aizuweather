@@ -1,3 +1,4 @@
+<% if session[:user].nil? %>
 <h1>New User</h1>
 <%= form_for(@user) do |f| %>
 	<% if @user.errors.any? %>
@@ -10,20 +11,26 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-	<div class="field">
-		<b><%= f.label :name, "UserName" %></b><br />
-		<%=h f.text_field :name %>
+	<% end %>
+	<fieldset>
+	<div class="clearfix">
+		<%= f.label :name, "UserName",:for=>"xlInput" %>
+		<div class="input"><%=h f.text_field :name %></div>
 	</div>
-	<div class="field">
-		<b><%= f.label :password, "Password" %></b><br />
-		<%=h f.password_field :password %>
+	<div class="clearfix">
+		<%= f.label :password, "Password",:for=>"xlinput" %>
+		<div class="input"><%=h f.password_field :password %></div>
 	</div>
-	<div class="field">
-		<b><%= f.label :password_confirmation, "Password(confirm)" %></b><br />
-		<%=h f.password_field :password_confirmation %>
+	<div class="clearfix">
+		<%= f.label :password_confirmation, "Password(confirm)",:for=>"xlinput" %>
+		<div class="input"><%=h f.password_field :password_confirmation %></div>
 	</div>
 	<div class="actions">
-		<%=f.submit "create" %>
+		<%=f.submit "create", :class=>'btn primary' %>
 	</div>
+	</fieldset>
+<% end %>
+
+<% else %>
+	Please sign out!! <%= link_to 'SignOut', new_session_path, :method => :delete %> 
 <% end %>

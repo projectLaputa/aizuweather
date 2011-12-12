@@ -6,7 +6,7 @@ html,body {
 	font-family: 'Comic Sans MS',sans-serif;
 	margin: 0;
 	padding: 0;
-	background: #888;
+	background: #eee;
 }
 
 /* table */
@@ -33,7 +33,7 @@ a:visited { color: #36f; }
 a:hover { text-decoration: underline; }
 
 #wrapper{
-	background: #888;
+	background: #eee; /* #888 */
 	min-height: 100%;
 	min-width: 100%;
 	height: 100%;
@@ -49,8 +49,9 @@ body > #wrapper {
 	padding: 0 50px 0 50px;
 	background-color: #505050;
 	max-width: 100%;
-	height: 35px;
+	height: 30px;
 	color: #fff;
+	font-size: 1.2em;
 	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
@@ -100,21 +101,20 @@ body > #wrapper {
 	margin: 20px 50px 20px 50px;
 	text-align: left;
 	height: 80%;
-	background-color: #ddd;
+	background-color: #eee;/* #888 */
 	clear: both;
 
 	/*font real*/
 	color: rgba(0,0,0, .8);
   text-shadow: 0 1px 0 #fff;
   line-height: 1.5;
-
-	/* angle */
-	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
-  -moz-border-radius: 10px;	/* Firefox */
-	
+/*
+	-webkit-border-radius: 10px;  
+  -moz-border-radius: 10px;	
 	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+*/
 }
 
 #map_index{
@@ -125,6 +125,7 @@ body > #wrapper {
 
 	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
   -moz-border-radius: 10px;	/* Firefox */
+
 }
 
 #variable{
@@ -152,4 +153,10 @@ body > #wrapper {
 
 	-webkit-border-radius: 10px;    /* Safari,Google Chrome */  
   -moz-border-radius: 10px;	/* Firefox */
+
 }
+/*
+.characteristics{
+	text-align: center;
+}
+*/

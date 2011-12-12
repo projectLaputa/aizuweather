@@ -1,9 +1,9 @@
-<h1>Listing Users</h1>
-
+<h1>Listing all users</h1>
+<div id="content">
 <table border=1px>
 	<tr>
-		<th>UserID</th>
-		<th>UserName</th>
+		<th>ID</th>
+		<th>Name</th>
   </tr>
 
 <% @users.each do |user| %>
@@ -13,8 +13,6 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
+</div>
 <%= link_to 'Instruments', instruments_path %>
 

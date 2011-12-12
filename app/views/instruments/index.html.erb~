@@ -1,6 +1,7 @@
-<h1>Listing instruments</h1>
-
-<table border=1px>
+<h1>Listing all instruments<span>How many instruments exist? Where are they?</span></h1>
+<div id="content">
+<table id="list"  class="tablesorter">
+	<thead>
 	<tr>
 		<th>User</th>
     <th>Latitude</th>
@@ -11,6 +12,8 @@
 		<th>Humidity</th>
 		<th></th>
 	</tr>
+	</thead>
+	<tbody>
 	<script>
 		var lat = new Array(<%= @instruments.size %>);
 		var lng = new Array(<%= @instruments.size %>);
@@ -27,25 +30,26 @@
     <td><%= instrument.longitude %></td>
     <td><%= instrument.type_of_instrument %></td>
     <td class="characteristics">
-			<% if instrument.temperature == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.temperature == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
     <td class="characteristics">
-			<% if instrument.pressure == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.pressure == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
 		<td class="characteristics">
-			<% if instrument.humidity == true %><%= image_tag ("icon/badge-circle-check-16.png", :alt=>"true") %>
-			<% else %><%= image_tag ("icon/badge-circle-cross-16.png", :alt=>"false") %>
+			<% if instrument.humidity == true %><%= image_tag("icon/badge-circle-check-16.png", :alt=>"true") %>
+			<% else %><%= image_tag("icon/badge-circle-cross-16.png", :alt=>"false") %>
 			<% end %>
 		</td>
     <td><%= link_to 'Show', instrument %></td>
   </tr>
-	<% end %>
+<% end %>
+	</tbody>
 </table>
-<div id="map">
-<%= render 'map_all' %>
 </div>
+<div id="map"></div>
+<%= render 'map_all' %>
 
