@@ -21,7 +21,7 @@ h1{
         font-size:70%;
         color: #777;
         position: relative;
-        top: -2px;
+        top: -1px;
 		}
 
 a:link { color: #36f; text-decoration: none; }
